@@ -15,15 +15,19 @@ app.use(function(req, res, next){
 
 app.use(express.static(path.join(__dirname, '../client/public')))
 
+app.get('*', function (req, res, next) {
+  res.sendFile(path.join(__dirname, '../public/index.html'));
+});
+
 app.use(bodyParser.json());
 
 // app.get('/', function(req, res) {
 //   res.send('Hello world')
 // })
 
-app.get('/', (req, res) => {
-  res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
-}); 
+// app.get('/', (req, res) => {
+//   res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
+// }); 
 
 app.post('/calculate', function (req, res) {
   const totalamount = req.body;
