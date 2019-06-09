@@ -10,7 +10,7 @@ const setAmountToPutOnCard = (amountToPutOnCard) => {
 
 export const fetchAmount = (amountToPutOnCard, numOfLoads) => {
   return async (dispatch) => {
-     await axios.post(`http://localhost:3000/calculate`, {
+     await axios.post(`/calculate`, {
       "oneLoad": 1.75,
       "amountOnCard": amountToPutOnCard,
       "numOfLoads": numOfLoads
