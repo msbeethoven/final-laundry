@@ -14,10 +14,7 @@ const AmountPrice = (props) => {
         {props.amountToPutOnCard ? props.amountToPutOnCard : null}
       </div>
 
-      <div>
-        lol: {chicken}
-      </div>
-
+    
 
     </div>
 
