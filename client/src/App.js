@@ -14,11 +14,11 @@ class App extends Component {
       data: null
     };
 
-    this.searchOnChange = this.searchOnChange.bind(this);
+    this.inputValueOnChange = this.inputValueOnChange.bind(this);
   }
 
-  searchOnChange(searchVal, numOfLoads) {
-    this.props.getFetchAmount(searchVal, numOfLoads)
+  inputValueOnChange(onCardAmount, numOfLoads) {
+    this.props.getFetchAmount(onCardAmount, numOfLoads)
   }
 
   componentDidMount() {
@@ -47,13 +47,11 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">How much is on your laundry card?</h1>
 
-       
-
           <div>
-            <AmountBar searchOnChange={this.searchOnChange} />
+            <AmountBar inputValueOnChange={this.inputValueOnChange} />
 
             <div>
-              <AmountPrice amountToPutOnCard={this.props.amountToPutOnCard} chicken="hi"/>
+              <AmountPrice amountToPutOnCard={this.props.amountToPutOnCard} />
             </div>
 
           </div>
