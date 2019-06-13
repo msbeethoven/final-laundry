@@ -13,10 +13,10 @@ const AmountBar = (props) => {
       <div className="onCardAmount">
         <input name="onCardAmount" type="number" min="0" step=".01" placeholder="How much is on your card?" required />
       </div>
-
+{/* 
       <div className="loadAmount">
         <input name="loadAmount" type="number" min="0" placeholder="How many loads?" required />
-      </div>
+      </div> */}
 
       <div>
 
