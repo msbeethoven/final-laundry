@@ -39,7 +39,7 @@ app.post('/calculate', function (req, res) {
   console.log(oneLoad)
   res.send({
     numOfLoads: numOfLoads,
-    whatToPutOnCard: (numOfLoads * oneLoad) - amountOnCard
+    whatToPutOnCard: ((numOfLoads * oneLoad) - amountOnCard).toFixed(2)
   })
   
 })
