@@ -35,9 +35,10 @@ app.post('/calculate', function (req, res) {
   const oneLoad = totalamount.oneLoad;
   const totalPrice = totalamount.totalPrice;
   const amountOnCard = totalamount.amountOnCard;
-  const numOfLoads = totalamount.numOfLoads; 
+  const numOfLoads = Math.ceil(amountOnCard/oneLoad); 
   console.log(oneLoad)
   res.send({
+    numOfLoads: numOfLoads,
     whatToPutOnCard: (numOfLoads * oneLoad) - amountOnCard
   })
   
