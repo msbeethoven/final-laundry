@@ -8,8 +8,8 @@ const AmountPrice = (props) => {
 
   return (
     <div>
-      <div>
-        {props.amountToPutOnCard ? props.amountToPutOnCard : null}
+      <div className="amountToPutOnCard">
+        {props.amountToPutOnCard ? `You should put $` + props.amountToPutOnCard + ` to zero out your card.` : null}
       </div>
     </div>
   )

@@ -4,14 +4,15 @@ import './App.css';
 const AmountBar = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.inputValueOnChange(e.target.onCardAmount.value, e.target.loadAmount.value);
+    props.inputValueOnChange(e.target.onCardAmount.value);
   };
 
   return (
     <form className="search" onSubmit={e => handleSubmit(e)}>
 
       <div className="onCardAmount">
-        <input name="onCardAmount" type="number" min="0" step=".01" placeholder="How much is on your card?" required />
+      How much is on your card?
+        <input name="onCardAmount" type="number" min="0" step=".01" placeholder="Please input amount." required />
       </div>
 {/* 
       <div className="loadAmount">
