@@ -11,7 +11,7 @@ const AmountBar = (props) => {
     <form className="search" onSubmit={e => handleSubmit(e)}>
 
       <div className="onCardAmount">
-      How much is on your card?
+      How much is on your card??
         <input name="onCardAmount" type="number" min="0" step=".01" placeholder="Please input amount." required />
       </div>
 {/* 

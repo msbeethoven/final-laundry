@@ -31,16 +31,21 @@ app.use(bodyParser.json());
 
 app.post('/calculate', function (req, res) {
   const totalamount = req.body;
-  console.log(totalamount) //what you put in postman in the Body //amountOnCard
+  console.log('hi', totalamount) //what you put in postman in the Body //amountOnCard
   const oneLoad = totalamount.oneLoad;
   const totalPrice = totalamount.totalPrice;
   const amountOnCard = totalamount.amountOnCard;
-  const numOfLoads = Math.ceil(amountOnCard/oneLoad); 
-  console.log(oneLoad)
+  
+  const minAmount = totalamount.minAmount;
+  const minPlusAmountOnCard = (Number( minAmount) + Number( amountOnCard)).toFixed(2)
+  console.log('minPlusAmountOnCard:', minPlusAmountOnCard)
+  const numOfLoads = Math.ceil(minPlusAmountOnCard/oneLoad); 
+  console.log('numOfLoads:', numOfLoads)
+  console.log('one load here:', oneLoad)
   res.send({
-    numOfLoads: numOfLoads,
-    whatToPutOnCard: ((numOfLoads * oneLoad) - amountOnCard).toFixed(2)
+    whatToPutOnCard: (((numOfLoads * oneLoad) - minPlusAmountOnCard)+minAmount).toFixed(2)
   })
+  //5 + 10 = 15 and then whatever that number is, do equation already there. add 10 plus that and add to the number the user inputted. 
   
 })
 
