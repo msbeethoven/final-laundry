@@ -18,8 +18,16 @@
   font-size: calc(10px + 2vmin);
 }
 
+.App-box {
+  margin: 50px;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+.question {
+  font-size: xx-large;
 }
 
 input[type=number] {
@@ -29,20 +37,25 @@ input[type=number] {
   margin: 8px 0;
   box-sizing: content-box;  
   width: 300px;
-  height: 100px;
   padding: 30px; 
   border: 0px solid #ccc;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   outline: none;
   color:white;
-  font-size: xx-large;
-  /* font-size: calc(10px + 2vmin); */
+  text-align: center;
+  font-size: x-large;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 ::placeholder {
   color: #FF69B4;
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 .searchBtn {
@@ -62,3 +75,11 @@ input[type=number] {
   padding: 50px;
 }
 
+#test {
+  color: white;
+  font-size: large;
+}
+
+.onCardAmount {
+  color: white;
+}

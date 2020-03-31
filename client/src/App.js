@@ -45,7 +45,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <div>
+          <div className="App-box">
             <AmountBar inputValueOnChange={this.inputValueOnChange} />
 
             <div>

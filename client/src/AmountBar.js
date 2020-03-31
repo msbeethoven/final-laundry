@@ -11,14 +11,9 @@ const AmountBar = (props) => {
     <form className="search" onSubmit={e => handleSubmit(e)}>
 
       <div className="onCardAmount">
-      How much is on your card??
-        <input name="onCardAmount" type="number" min="0" step=".01" placeholder="Please input amount." required />
+        <div class="question">How much is on your card right now?</div>
+        <input name="onCardAmount" type="number" min="0" step=".01" placeholder="Please input dollar amount" required />
       </div>
-{/* 
-      <div className="loadAmount">
-        <input name="loadAmount" type="number" min="0" placeholder="How many loads?" required />
-      </div> */}
-
       <div>
 
       </div>
@@ -26,6 +21,6 @@ const AmountBar = (props) => {
       <button className="searchBtn" type="submit">Refill</button>
     </form>
   );
-}; 
+};
 
 export default AmountBar; 
