@@ -12,7 +12,7 @@ const AmountBar = (props) => {
 
       <div className="onCardAmount">
         <div class="question">How much is on your card right now?</div>
-        <input name="onCardAmount" type="number" min="0" step=".01" placeholder="Please input dollar amount" required />
+        <input name="onCardAmount" type="number" min="0" step=".01" placeholder="Please input dollar amount here" required />
       </div>
       <div>
 

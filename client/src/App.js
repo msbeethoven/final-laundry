@@ -4,6 +4,7 @@ import { fetchAmount } from './redux/actions'
 import AmountBar from './AmountBar';
 import AmountPrice from './AmountPrice';
 import './App.css';
+import { ReactComponent as ReactLogo } from './prayer.svg';
 
 class App extends Component {
 
@@ -44,17 +45,11 @@ class App extends Component {
     console.log('ugh', this.props)
     return (
       <div className="App">
-        <header className="App-header">
-          <div className="App-box">
-            <AmountBar inputValueOnChange={this.inputValueOnChange} />
-
-            <div>
-              <AmountPrice amountToPutOnCard={this.props.amountToPutOnCard} />
-            </div>
-
-          </div>
-        </header>
-        <p className="App-intro">{this.state.data}</p>
+          <ReactLogo />
+        <div className="App-box">
+          <AmountBar inputValueOnChange={this.inputValueOnChange} />
+          <AmountPrice amountToPutOnCard={this.props.amountToPutOnCard} />
+        </div>
       </div>
     );
   }
@@ -70,7 +65,7 @@ const mapDispatchToProps = (dispatch) => {
   return ({
     getFetchAmount: (amountToPutOnCard, numOfLoads) => dispatch(fetchAmount(amountToPutOnCard, numOfLoads)),
     okay: () => console.log('something')
-    
+
 
   })
 };
