@@ -31,7 +31,10 @@ body {
   margin-top: 15px;
   color: white;
   margin-bottom: 8px;
-  max-width: 320px; 
+}
+
+.amountToPutOnCard {
+  max-width: 270px;
 }
 
 
