@@ -1,104 +1,11 @@
-
-
-/* .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #c8a2c8;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-.App-box {
-  text-align: center;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 450px;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.question {
-  font-size: xx-large;
-}
-
-input[type=number] {
-  width: 100%;
-  background-color: #c8a2c8;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: content-box;  
-  width: 300px;
-  padding: 30px; 
-  border: 0px solid #ccc;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  outline: none;
-  color:white;
-  text-align: center;
-  font-size: x-large;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-::placeholder {
-  color: #FF69B4;
-  font-size: x-large;
-}
-
-.searchBtn {
-  background-color: #FF69B4; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-
-
-.amountToPutOnCard {
-  color: white;
-  font-size: xx-large;
-  padding: 50px;
-  
-}
-
-#test {
-  color: white;
-  font-size: large;
-  transition: 5s;
-}
-
-.onCardAmount {
-  color: white;
-}
-
-  */
-
 html, body {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   background-color: #F7F8FB;
   height: 100%;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased; 
+}
 
 body {
   margin: 0;
@@ -109,7 +16,7 @@ body {
   justify-content: center; 
 }
 
-.App-box {
+.App {
   text-align: center;
   align-self: center;
   display: flex;
@@ -134,7 +41,8 @@ p {
   font-size: 15px;
   color: #7F828B;
   line-height: 21px;
-  margin-bottom: 4px; }
+  margin-bottom: 4px; 
+}
 
 .searchBtn {
   text-decoration: none;
@@ -147,40 +55,9 @@ p {
   background: transparent;
 }
 
-.hk-logo, .app-icon {
-  fill: #DBE1EC; }
-
-.info {
-  fill: #9FABBC; }
-
 body {
-  background: linear-gradient(135deg, #c8a2c8 50%, #FF69B4 100%); }
-
-body.friendly .message__title {
-  color: #fff; }
-
-body.friendly p {
-  color: rgba(255, 255, 255, 0.6); }
-
-body.friendly .hk-logo, body.friendly .app-icon {
-  fill: rgba(255, 255, 255, 0.9); }
-
-body.friendly .info {
-  fill: rgba(255, 255, 255, 0.9); }
-
-body.friendly .btn {
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.9); }
-
-.info_area {
-  position: fixed;
-  right: 12px;
-  bottom: 12px; }
-
-.logo {
-  position: fixed;
-  left: 12px;
-  bottom: 12px; }
+  background: linear-gradient(135deg, #c8a2c8 50%, #FF69B4 100%); 
+}
 
   input[type=number] {
     width: 100%;
@@ -203,10 +80,29 @@ body.friendly .btn {
     margin: 0;
   }
 
-  svg { 
+  .answer {
+    color: rgb(65, 65, 211);
+  }
+
+  .prayer { 
     display: flex;
     margin: auto;
     fill: white;
     width: 45px;
     height: 45px;
+  }
+
+  .svg-icon {
+    width: 25px;
+    height: 25px;
+    padding: 0px 5px;
+  }
+
+  .credits {
+    display: flex;
+    justify-content: center;
+    position:fixed;
+    bottom:0;
+    left:0;
+    padding: 1px;
   }

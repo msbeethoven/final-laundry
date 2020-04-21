@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchAmount } from './redux/actions'
 import AmountBar from './AmountBar';
 import AmountPrice from './AmountPrice';
+import Credits from './Credits';
 import './App.css';
 import { ReactComponent as ReactLogo } from './prayer.svg';
 
@@ -44,13 +45,17 @@ class App extends Component {
   render() {
     console.log('ugh', this.props)
     return (
+      <div>
       <div className="App">
           <ReactLogo />
-        <div className="App-box">
+        {/* <div className="App-box"> */}
           <AmountBar inputValueOnChange={this.inputValueOnChange} />
           <AmountPrice amountToPutOnCard={this.props.amountToPutOnCard} />
-        </div>
+        {/* </div> */}
+       
       </div>
+<Credits /></div>
+       
     );
   }
 }
