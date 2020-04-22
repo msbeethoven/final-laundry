@@ -43,35 +43,27 @@ class App extends Component {
   };
 
   render() {
-    console.log('ugh', this.props)
     return (
       <div>
-      <div className="App">
+        <div className="App">
           <ReactLogo />
-        {/* <div className="App-box"> */}
           <AmountBar inputValueOnChange={this.inputValueOnChange} />
           <AmountPrice amountToPutOnCard={this.props.amountToPutOnCard} />
-        {/* </div> */}
-       
+        </div>
+        <Credits />
       </div>
-<Credits /></div>
-       
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  console.log("what is state", state)
-  console.log("So does this narrow it down", state.amountToPutOnCard)
   return state;
 };
 
 const mapDispatchToProps = (dispatch) => {
   return ({
-    getFetchAmount: (amountToPutOnCard, numOfLoads) => dispatch(fetchAmount(amountToPutOnCard, numOfLoads)),
-    okay: () => console.log('something')
-
-
+    getFetchAmount: (amountToPutOnCard, numOfLoads) => dispatch(fetchAmount(amountToPutOnCard, numOfLoads)), 
+    okay: () => console.log('this is showcasing what is on props')
   })
 };
 

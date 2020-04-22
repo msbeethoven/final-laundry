@@ -4,7 +4,6 @@ import Email from './Email';
 import Github from './Github';
 
 const Icon = props => {
-  console.log(props.name)
   switch (props.name){
     case "email":
       return <Email {...props} />
