@@ -23,6 +23,7 @@ app.use(bodyParser.json());
 
 app.post('/calculate', function (req, res) {
   const totalamount = req.body; //what you put in postman in the Body
+  console.log("totalamount: ", totalamount)
   const oneLoad = totalamount.oneLoad;
   const totalPrice = totalamount.totalPrice;
   const amountOnCard = totalamount.amountOnCard;

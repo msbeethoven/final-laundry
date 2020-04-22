@@ -1,6 +1,7 @@
 import React from 'react';
 
 const AmountPrice = (props) => {
+  console.log("props: ", props) //{amountToPutOnCard: "10.60"}
   return (
     <div className="amountToPutOnCard">
       <div className="answer">

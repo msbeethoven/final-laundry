@@ -57,10 +57,12 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log("state: ", state)
   return state;
 };
 
 const mapDispatchToProps = (dispatch) => {
+  console.log('dispatch: ', dispatch)
   return ({
     getFetchAmount: (amountToPutOnCard, numOfLoads) => dispatch(fetchAmount(amountToPutOnCard, numOfLoads)), 
     okay: () => console.log('this is showcasing what is on props')

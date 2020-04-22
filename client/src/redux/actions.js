@@ -16,6 +16,7 @@ export const fetchAmount = (amountToPutOnCard, numOfLoads) => {
       "amountOnCard": amountToPutOnCard,
       "numOfLoads": numOfLoads
     }).then(function(res){
+      console.log("res.data: ", res.data)
       dispatch(setAmountToPutOnCard(res.data.whatToPutOnCard));
     }).catch(function(err){
       console.log(err)
